@@ -22,15 +22,15 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text(
-              'Hello CS mobile Test',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              )
-              ),
+            Text('Hello CS mobile Test'),
             Text('kmutnb'),
-            Text('BKK TH')
+            ElevatedButton(onPressed: () {
+              debugPrint("btn pressed");
+            }, 
+            child: Text(
+              'OK button', style: TextStyle(fontSize: 24),
+              ),
+            ),
           ],
         ),
       ),
