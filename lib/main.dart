@@ -20,12 +20,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('MyApp'),
         ),
-        body: Text(
-          'Hello CS eiei', 
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
+        body: Column(
+          children: [
+            Text(
+              'Hello CS mobile Test',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              )
+              ),
+            Text('kmutnb'),
+            Text('BKK TH')
+          ],
         ),
       ),
     );
