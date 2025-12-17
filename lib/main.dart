@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 105, 44, 129)),
         //colorScheme: Color.amber),
@@ -19,6 +20,20 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('MyApp'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.shopping_cart),
+              onPressed: () {
+                debugPrint('icon2 pressed');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.info),
+              onPressed: () {
+                debugPrint('icon2 pressed');
+              },
+            ),
+          ],
         ),
         body: Center(
           child: Column(
