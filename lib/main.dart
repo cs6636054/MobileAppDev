@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
             children: [
               Text('Hello CS mobile Test'),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(Icons.ev_station),
                   Text('EV station KMUTNB',),
