@@ -34,6 +34,12 @@ class MyApp extends StatelessWidget {
               },
             ),
           ],
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              debugPrint('leading icon pressed');
+            },
+          ),
         ),
         body: Center(
           child: Column(
