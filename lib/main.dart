@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 105, 44, 129)),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 105, 44, 129)),
         //colorScheme: Color.amber),
         useMaterial3: true,
-        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 82, 156, 190)),
+        appBarTheme:
+            const AppBarTheme(color: Color.fromARGB(255, 82, 156, 190)),
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -45,12 +47,29 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               Text('Hello CS mobile Test'),
+              Row(
+                children: [
+                  Icon(Icons.ev_station),
+                  Text('EV station KMUTNB',),
+                ],
+              ),
               Text('kmutnb'),
-              ElevatedButton(onPressed: () {
-                debugPrint("btn pressed");
-              }, 
-              child: Text(
-                'OK button', style: TextStyle(fontSize: 24),
+              Icon(Icons.ev_station),
+              Image.network(
+                'https://miro.medium.com/v2/resize:fit:720/format:webp/1*GI-td9gs8D5OKZd19mAOqA.png',
+                width: 120,
+              ),
+              Image.asset(
+                'assets/images/meme2.jpg',
+                width: 120,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  debugPrint("btn pressed");
+                },
+                child: Text(
+                  'OK button',
+                  style: TextStyle(fontSize: 24),
                 ),
               ),
             ],
@@ -60,4 +79,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
